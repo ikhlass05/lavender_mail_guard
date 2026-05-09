@@ -1,8 +1,7 @@
 #relie html with python
 from flask import Flask, render_template, request
 from pfc import predict_msg, get_metrics  # ta fonction python
-import webbrowser
-import threading
+
 
 app = Flask(__name__)
 history=[]
@@ -37,5 +36,4 @@ def open_browser():
     webbrowser.open("http://127.0.0.1:5000")
 
 if __name__ == '__main__':
-    threading.Timer(1, open_browser).start()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
