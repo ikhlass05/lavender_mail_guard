@@ -1,1 +1,0 @@
-# lavender_mail_guard
